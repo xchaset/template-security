@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 import com.alibaba.druid.pool.DruidDataSource;
 
 @Configuration
-
 public class DruidConfig {
 
 	@Value("${spring.datasource.url}")

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>图书系统管理平台登录页</title>
+ <script src="http://192.168.56.1/mngapp/js/jquery.min.js"></script> 
+ <link rel="stylesheet" href="http://192.168.56.1/mngapp/css/bootstrap.min.css"></link> 
+ <script src="http://192.168.56.1/mngapp/js/bootstrap.min.js"></script>
+ <script src="http://192.168.56.1/mngapp/js/login.js"></script>
+ <link rel="stylesheet" href="http://192.168.56.1/mngapp/css/login.css"></link>
+<!--  <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script> -->
+    </head>
+    <body onload="document.f.username.focus();">
+    	<!-- <div id="header" th:include="page :: header"></div> -->
+    	<div id="content" class="bodydiv">
+    		<form th:action='@{login}' method="post" name="f">
+    			<table>
+    				<thead>
+    					<h4>图书管理系统登录</h4>
+    				</thead>
+    				<tr>
+    					<td>用户名：</td>
+    					<td><input type="text" name="username" value="" placeholder="input username"></input></td>
+    				</tr>
+    				<tr>
+    					<td>密 码：</td>
+    					<td><input type="password" name="password" value="" placeholder="input password"></input></td>
+    				</tr>
+    				<tr>
+    					<td><input id="	" name="remember-me" type="checkbox"></input>
+    					<lable for="remember_me" class="inline">记住密码</lable></td>
+    				</tr>
+    				<tr>
+    					<td colspan="2">
+    						<input name="submit" type="submit" value="登录"></input>
+    					</td>
+    				</tr>
+    			</table>
+    			
+    		</form>
+    	
+    	</div>
+    	<!-- <div id="footer" th:include="page :: copy"></div> -->
+
+    </body>
+</html>
