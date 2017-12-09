@@ -18,11 +18,12 @@ import com.xchaset.bean.UserInfo;
 import com.xchaset.dao.AuthoritiesMapper;
 import com.xchaset.dao.UserInfoMapper;
 import com.xchaset.dto.BaseResponse;
+import com.xchaset.util.SpringUtil;
 
 @Controller
 public class Control {
 	@Autowired
-	private UserInfoMapper usersMapper;
+	private UserInfoMapper usersInfoMapper;
 	
 	@Autowired
 	private AuthoritiesMapper authoritiesMapper;
@@ -30,7 +31,8 @@ public class Control {
 	@RequestMapping("/user/{username}")
 	@ResponseBody
 	public BaseResponse<UserInfo> getUser(@PathVariable String username){
-		UserInfo users = usersMapper.getByName(username);
+
+		UserInfo users = usersInfoMapper.getByName(username);
 		BaseResponse<UserInfo> baseResponse = new BaseResponse<>();
 		if(null == users){
 			baseResponse.setRetCode("00001");
